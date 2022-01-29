@@ -44,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Song"
+
         android:textColor="@color/orange_secondary"
         android:textSize="20sp"
         android:background="@color/blue_dark"
@@ -69,6 +70,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="50dp"
+            android:onClick="previous"
             android:background="@drawable/circle"
             app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
 
@@ -77,6 +79,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="50dp"
+            android:onClick="play"
             android:background="@drawable/circle"
             app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
 
@@ -84,6 +87,7 @@
             android:id="@+id/skipNextImageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:onClick="next"
             android:background="@drawable/circle"
             app:srcCompat="@drawable/ic_baseline_skip_next_24" />
     </LinearLayout>
