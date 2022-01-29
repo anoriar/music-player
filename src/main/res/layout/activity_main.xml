@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +8,7 @@
     android:orientation="vertical"
     android:background="@drawable/background"
     tools:context=".MainActivity">
+
 
     <ImageView
         android:id="@+id/circleImageView"
@@ -36,52 +38,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_music_note_24" />
 
-    <ImageView
-        android:id="@+id/rectangleImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circleImageView"
-        android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/rectangle" />
 
     <TextView
-        android:id="@+id/songTextView"
+        android:id="@+id/songTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Song"
         android:textColor="@color/orange_secondary"
         android:textSize="20sp"
+        android:background="@color/blue_dark"
+        android:padding="8dp"
         android:layout_marginTop="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
 
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/songTextView">
+        app:layout_constraintTop_toBottomOf="@+id/songTitleTextView">
 
         <ImageView
             android:id="@+id/skipPreviousImageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/circle"
             android:layout_marginEnd="50dp"
+            android:background="@drawable/circle"
             app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
 
         <ImageView
             android:id="@+id/playArrowImageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/circle"
             android:layout_marginEnd="50dp"
+            android:background="@drawable/circle"
             app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
 
         <ImageView
@@ -91,6 +87,17 @@
             android:background="@drawable/circle"
             app:srcCompat="@drawable/ic_baseline_skip_next_24" />
     </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songTitleTextView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
